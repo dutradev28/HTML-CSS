@@ -12,22 +12,21 @@
 
         table {
             width: 400px;
+            height: 400px;
             border-collapse: collapse;
-            border: 5px solid red;
-        }
-
-        tr.linha {
-            background-color: grey;
+            
         }
 
         td {
             border: 1px solid black;
             padding: 8px;
+            text-align: center;
+            vertical-align: bottom;
         }
 
-        td.dado:hover {
-            background-color: yellow;
-        }
+       .numero {
+        text-align: right;
+       }
     </style>
 </head>
 <body>
@@ -38,15 +37,15 @@
             <td>B1</td>
             <td>C1</td>
         </tr>
-        <tr class="linha">
+        <tr>
             <td>A2</td>
             <td>B2</td>
-            <td>C2</td>
+            <td class="numero">C2</td>
         </tr>
         <tr>
             <td>A3</td>
             <td>B3</td>
-            <td class="dado">C3</td>
+            <td class="numero">C3</td>
         </tr>
         <tr>
             <td>A4</td>
