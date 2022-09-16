@@ -12,6 +12,14 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;            
+        }
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgrey;
+           
         }
         td, th {
             border: 1px solid black;
@@ -21,149 +29,168 @@
             background-color: grey;
             color: white;
         }
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: grey;
+        }
+
         tfoot{
             background-color: grey;
             color: white;
             text-align: center;
         }
+        tbody tr:nth-child(2n) {
+            background-color: lightgrey;
+        }
+
         td.num{
             text-align: right;
+            width: 50px;
         }
         td.total {
             font-weight: bold;
             text-align: right;
-        }
+        }        
     </style>
 </head>
 <body>
     <h1>Uso de tabelas grandes</h1>
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
-            <tr>
-                <th>Estado</th>
-                <th>População</th>
+            <tr>                
+                <th scope="col">Unidade Federativa</th>
+                <th scope="col">População</th>
+                
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>São Paulo</td>
+            <tr>                
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Bandeira_do_estado_de_S%C3%A3o_Paulo.svg/22px-Bandeira_do_estado_de_S%C3%A3o_Paulo.svg.png" alt="bandeira de São Paulo"> São Paulo</td>
                 <td class="num">46 649 132</td>
             </tr>
             <tr>
-                <td>Minas Gerais</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Bandeira_de_Minas_Gerais.svg/20px-Bandeira_de_Minas_Gerais.svg.png" alt="bandeira de minas gerais"> Minas Gerais</td>
                 <td class="num">21 411 923</td>
             </tr>
             <tr>
-                <td>Rio de Janeiro</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Bandeira_do_estado_do_Rio_de_Janeiro.svg/20px-Bandeira_do_estado_do_Rio_de_Janeiro.svg.png" alt="bandeira do Rio de Janeiro"> Rio de Janeiro</td>
                 <td class="num">17 463 349</td>
             </tr>
             <tr>
-                <td>Bahia</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Bandeira_da_Bahia.svg/20px-Bandeira_da_Bahia.svg.png" alt=""> Bahia</td>
                 <td class="num">14 985 284</td>
             </tr>
             <tr>
-                <td>Paraná</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Bandeira_do_Paran%C3%A1.svg/20px-Bandeira_do_Paran%C3%A1.svg.png" alt="bandeira do Paraná"> Paraná</td>
                 <td class="num">11 597 484</td>
             </tr>
             <tr>
-                <td>Rio Grande do Sul</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Bandeira_do_Rio_Grande_do_Sul.svg/20px-Bandeira_do_Rio_Grande_do_Sul.svg.png" alt="bandeira do Rio Grande do Sul"> Rio Grande do Sul</td>
                 <td class="num">11 466 630</td>
             </tr>
             <tr>
-                <td>Pernambuco</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Bandeira_de_Pernambuco.svg/20px-Bandeira_de_Pernambuco.svg.png" alt="bandeira de Pernambuco"> Pernambuco</td>
                 <td class="num">9 674 793</td>
             </tr>
             <tr>
-                <td>Ceará</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Bandeira_do_Cear%C3%A1.svg/20px-Bandeira_do_Cear%C3%A1.svg.png" alt="bandeira do Ceará"> Ceará</td>
                 <td class="num">9 240 580</td>
             </tr>
             <tr>
-                <td>Pará</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Bandeira_do_Par%C3%A1.svg/20px-Bandeira_do_Par%C3%A1.svg.png" alt="bandeira do Pará"> Pará</td>
                 <td class="num">8 777 124</td>
             </tr>
             <tr>
-                <td>Santa Catarina</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Bandeira_de_Santa_Catarina.svg/20px-Bandeira_de_Santa_Catarina.svg.png" alt="bandeira de Santa Catarina"> Santa Catarina</td>
                 <td class="num">7 338 473</td>
                 
             </tr>
             <tr>
-                <td>Goiás</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Flag_of_Goi%C3%A1s.svg/20px-Flag_of_Goi%C3%A1s.svg.png" alt="bandeira de Goiás"> Goiás</td>
                 <td class="num">7 206 589</td>
             </tr>
             <tr>
-                <td>Maranhão</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Bandeira_do_Maranh%C3%A3o.svg/20px-Bandeira_do_Maranh%C3%A3o.svg.png" alt="bandeira do Maranhão"> Maranhão</td>
                 <td class="num">7 153 262</td>
             </tr>
             <tr>
-                <td>Amazonas</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Bandeira_do_Amazonas.svg/20px-Bandeira_do_Amazonas.svg.png" alt="bandeira do Amazonas"> Amazonas</td>
                 <td class="num">4 269 995</td>
             </tr>
             <tr>
-                <td>Espírito Santo</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Bandeira_do_Esp%C3%ADrito_Santo.svg/20px-Bandeira_do_Esp%C3%ADrito_Santo.svg.png" alt="bandeira do Espírito Santo"> Espírito Santo</td>
                 <td class="num">4 108 508</td>
             </tr>
             <tr>
-                <td>Paraíba</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Bandeira_da_Para%C3%ADba.svg/20px-Bandeira_da_Para%C3%ADba.svg.png" alt="bandeira da Paraíba"> Paraíba</td>
                 <td class="num">4 059 905</td>
 
             </tr>
             <tr>
-                <td>Mato Grosso</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Bandeira_de_Mato_Grosso.svg/20px-Bandeira_de_Mato_Grosso.svg.png" alt="bandeira do Mato Grosso"> Mato Grosso</td>
                 <td class="num">3 567 234</td>
             </tr>
             <tr>
-                <td>Rio Grande do Norte</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Bandeira_do_Rio_Grande_do_Norte.svg/20px-Bandeira_do_Rio_Grande_do_Norte.svg.png" alt="bandeira do Rio Grande do Norte"> Rio Grande do Norte</td>
                 <td class="num">3 560 903</td>
 
             </tr>
             <tr>
-                <td>Alagoas</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Bandeira_de_Alagoas.svg/20px-Bandeira_de_Alagoas.svg.png" alt="bandeira de Alagoas"> Alagoas</td>
                 <td class="num">3 365 351</td>
             </tr>
             <tr>
-                <td>Piauí</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Bandeira_do_Piau%C3%AD.svg/20px-Bandeira_do_Piau%C3%AD.svg.png" alt="bandeira do Piauí"> Piauí</td>
                 <td class="num">3 289 290</td>
             </tr>
             <tr>
-                <td>Distrito Federal</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Bandeira_do_Distrito_Federal_%28Brasil%29.svg/20px-Bandeira_do_Distrito_Federal_%28Brasil%29.svg.png" alt="bandeira do Distrito Federal"> Distrito Federal</td>
                 <td class="num">3 094 325</td>
             </tr>
             <tr>
-                <td>Mato Grosso do Sul</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Bandeira_de_Mato_Grosso_do_Sul.svg/20px-Bandeira_de_Mato_Grosso_do_Sul.svg.png" alt="bandeira do Mato Grosso do Sul"> Mato Grosso do Sul</td>
                 <td class="num">2 839 188</td>
 
             </tr>
             <tr>
-                <td>Sergipe</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Bandeira_de_Sergipe.svg/20px-Bandeira_de_Sergipe.svg.png" alt="bandeira de Sergipe"> Sergipe</td>
                 <td class="num">2 338 474</td>
             </tr>
             <tr>
-                <td>Rondônia</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Bandeira_de_Rond%C3%B4nia.svg/20px-Bandeira_de_Rond%C3%B4nia.svg.png" alt="bandeira de Rondônia"> Rondônia</td>
                 <td class="num">1 815 278</td>
             </tr>
             <tr>
-                <td>Tocantins</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Bandeira_do_Tocantins.svg/20px-Bandeira_do_Tocantins.svg.png" alt="bandeira de Tocantins"> Tocantins</td>
                 <td class="num">1 607 363</td>
             </tr>
             <tr>
-                <td>Acre</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Bandeira_do_Acre.svg/20px-Bandeira_do_Acre.svg.png" alt="bandeira do Acre"> Acre</td>
                 <td class="num">906 876</td>
             </tr>
             <tr>
-                <td>Amapá</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Bandeira_do_Amap%C3%A1.svg/20px-Bandeira_do_Amap%C3%A1.svg.png" alt="bandeira do Amapá"> Amapá</td>
                 <td class="num">877 613</td>
             </tr>
             <tr>
-                <td>Roraima</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Bandeira_de_Roraima.svg/20px-Bandeira_de_Roraima.svg.png" alt="bandeira de Roraima"> Roraima</td>
                 <td class="num">652 713</td>
             </tr>          
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td class="total">166.668.507</td>
             </tr>
         </tfoot>
     </table>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae doloremque voluptatibus atque, voluptates corrupti beatae omnis eius molestiae labore vitae eveniet distinctio iusto, ducimus architecto accusamus reiciendis a ex debitis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus itaque rerum eius recusandae quod architecto excepturi fugit necessitatibus, nesciunt praesentium nostrum perferendis accusamus. Possimus earum provident aut rerum eveniet repudiandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est veniam doloribus aut explicabo reiciendis temporibus ipsa cumque, rem eius voluptates architecto voluptatum amet incidunt maiores sequi placeat sit iure quibusdam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel temporibus at, maxime iste animi et adipisci praesentium cumque, aliquam hic atque maiores non alias ipsum unde, facilis ipsa quia reprehenderit!</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae doloremque voluptatibus atque, voluptates corrupti beatae omnis eius molestiae labore vitae eveniet distinctio iusto, ducimus architecto accusamus reiciendis a ex debitis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus itaque rerum eius recusandae quod architecto excepturi fugit necessitatibus, nesciunt praesentium nostrum perferendis accusamus. Possimus earum provident aut rerum eveniet repudiandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est veniam doloribus aut explicabo reiciendis temporibus ipsa cumque, rem eius voluptates architecto voluptatum amet incidunt maiores sequi placeat sit iure quibusdam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel temporibus at, maxime iste animi et adipisci praesentium cumque, aliquam hic atque maiores non alias ipsum unde, facilis ipsa quia reprehenderit!</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae doloremque voluptatibus atque, voluptates corrupti beatae omnis eius molestiae labore vitae eveniet distinctio iusto, ducimus architecto accusamus reiciendis a ex debitis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus itaque rerum eius recusandae quod architecto excepturi fugit necessitatibus, nesciunt praesentium nostrum perferendis accusamus. Possimus earum provident aut rerum eveniet repudiandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est veniam doloribus aut explicabo reiciendis temporibus ipsa cumque, rem eius voluptates architecto voluptatum amet incidunt maiores sequi placeat sit iure quibusdam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel temporibus at, maxime iste animi et adipisci praesentium cumque, aliquam hic atque maiores non alias ipsum unde, facilis ipsa quia reprehenderit!</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae doloremque voluptatibus atque, voluptates corrupti beatae omnis eius molestiae labore vitae eveniet distinctio iusto, ducimus architecto accusamus reiciendis a ex debitis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus itaque rerum eius recusandae quod architecto excepturi fugit necessitatibus, nesciunt praesentium nostrum perferendis accusamus. Possimus earum provident aut rerum eveniet repudiandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est veniam doloribus aut explicabo reiciendis temporibus ipsa cumque, rem eius voluptates architecto voluptatum amet incidunt maiores sequi placeat sit iure quibusdam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel temporibus at, maxime iste animi et adipisci praesentium cumque, aliquam hic atque maiores non alias ipsum unde, facilis ipsa quia reprehenderit!</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae doloremque voluptatibus atque, voluptates corrupti beatae omnis eius molestiae labore vitae eveniet distinctio iusto, ducimus architecto accusamus reiciendis a ex debitis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus itaque rerum eius recusandae quod architecto excepturi fugit necessitatibus, nesciunt praesentium nostrum perferendis accusamus. Possimus earum provident aut rerum eveniet repudiandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est veniam doloribus aut explicabo reiciendis temporibus ipsa cumque, rem eius voluptates architecto voluptatum amet incidunt maiores sequi placeat sit iure quibusdam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel temporibus at, maxime iste animi et adipisci praesentium cumque, aliquam hic atque maiores non alias ipsum unde, facilis ipsa quia reprehenderit!</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae doloremque voluptatibus atque, voluptates corrupti beatae omnis eius molestiae labore vitae eveniet distinctio iusto, ducimus architecto accusamus reiciendis a ex debitis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus itaque rerum eius recusandae quod architecto excepturi fugit necessitatibus, nesciunt praesentium nostrum perferendis accusamus. Possimus earum provident aut rerum eveniet repudiandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est veniam doloribus aut explicabo reiciendis temporibus ipsa cumque, rem eius voluptates architecto voluptatum amet incidunt maiores sequi placeat sit iure quibusdam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel temporibus at, maxime iste animi et adipisci praesentium cumque, aliquam hic atque maiores non alias ipsum unde, facilis ipsa quia reprehenderit!</p><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae doloremque voluptatibus atque, voluptates corrupti beatae omnis eius molestiae labore vitae eveniet distinctio iusto, ducimus architecto accusamus reiciendis a ex debitis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus itaque rerum eius recusandae quod architecto excepturi fugit necessitatibus, nesciunt praesentium nostrum perferendis accusamus. Possimus earum provident aut rerum eveniet repudiandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est veniam doloribus aut explicabo reiciendis temporibus ipsa cumque, rem eius voluptates architecto voluptatum amet incidunt maiores sequi placeat sit iure quibusdam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel temporibus at, maxime iste animi et adipisci praesentium cumque, aliquam hic atque maiores non alias ipsum unde, facilis ipsa quia reprehenderit!</p><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae doloremque voluptatibus atque, voluptates corrupti beatae omnis eius molestiae labore vitae eveniet distinctio iusto, ducimus architecto accusamus reiciendis a ex debitis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus itaque rerum eius recusandae quod architecto excepturi fugit necessitatibus, nesciunt praesentium nostrum perferendis accusamus. Possimus earum provident aut rerum eveniet repudiandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est veniam doloribus aut explicabo reiciendis temporibus ipsa cumque, rem eius voluptates architecto voluptatum amet incidunt maiores sequi placeat sit iure quibusdam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel temporibus at, maxime iste animi et adipisci praesentium cumque, aliquam hic atque maiores non alias ipsum unde, facilis ipsa quia reprehenderit!</p><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae doloremque voluptatibus atque, voluptates corrupti beatae omnis eius molestiae labore vitae eveniet distinctio iusto, ducimus architecto accusamus reiciendis a ex debitis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus itaque rerum eius recusandae quod architecto excepturi fugit necessitatibus, nesciunt praesentium nostrum perferendis accusamus. Possimus earum provident aut rerum eveniet repudiandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est veniam doloribus aut explicabo reiciendis temporibus ipsa cumque, rem eius voluptates architecto voluptatum amet incidunt maiores sequi placeat sit iure quibusdam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel temporibus at, maxime iste animi et adipisci praesentium cumque, aliquam hic atque maiores non alias ipsum unde, facilis ipsa quia reprehenderit!</p>
 </body>
 </html>
